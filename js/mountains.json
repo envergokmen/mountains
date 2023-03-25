@@ -1,0 +1,100 @@
+[
+        {
+            "name": "Mount Everest",
+            "long": 86.9253,
+            "lat": 27.9881,
+            "alt": 8848,
+            "cont": "Asia"
+        },
+        {
+            "name": "K2",
+            "long": 76.5136,
+            "lat": 35.8819,
+            "alt": 8611,
+            "cont": "Asia"
+        },
+        {
+            "name": "Kangchenjunga",
+            "long": 88.1467,
+            "lat": 27.7025,
+            "alt": 8586,
+            "cont": "Asia"
+        },
+        {
+            "name": "Lhotse",
+            "long": 86.9336,
+            "lat": 27.9619,
+            "alt": 8516,
+            "cont": "Asia"
+        },
+        {
+            "name": "Makalu",
+            "long": 87.0889,
+            "lat": 27.8897,
+            "alt": 8485,
+            "cont": "Asia"
+        },
+        {
+            "name": "Cho Oyu",
+            "long": 86.6589,
+            "lat": 28.0942,
+            "alt": 8188,
+            "cont": "Asia"
+        },
+        {
+            "name": "Dhaulagiri",
+            "long": 83.4933,
+            "lat": 28.6964,
+            "alt": 8167,
+            "cont": "Asia"
+        },
+        {
+            "name": "Manaslu",
+            "long": 84.5594,
+            "lat": 28.5506,
+            "alt": 8163,
+            "cont": "Asia"
+        },
+        {
+            "name": "Nanga Parbat",
+            "long": 74.5892,
+            "lat": 35.2389,
+            "alt": 8126,
+            "cont": "Asia"
+        },
+        {
+            "name": "Annapurna",
+            "long": 83.8203,
+            "lat": 28.5961,
+            "alt": 8091,
+            "cont": "Asia"
+        },
+        {
+            "name": "Shishapangma",
+            "long": 85.7792,
+            "lat": 28.3533,
+            "alt": 8027,
+            "cont": "Asia"
+        },
+        {
+            "name": "Aconcagua",
+            "long": -70.0158,
+            "lat": -32.6532,
+            "alt": 6962,
+            "cont": "South America"
+        },
+        {
+            "name": "Denali (Mount McKinley)",
+            "long": -151.0377,
+            "lat": 63.0691,
+            "alt": 6194,
+            "cont": "North America"
+        },
+        {
+            "name": "Kilimanjaro",
+            "long": 37.3556,
+            "lat": -3.0674,
+            "alt": 5895,
+            "cont": "Africa"
+        }
+]
