@@ -45,7 +45,7 @@ $( document ).ready(function() {
         store.createIndex("Long_IX", "long", { unique: false });
         store.createIndex("Alt_IX", "alt", { unique: false });
         store.createIndex("Cont_IX", "cont", { unique: false });
-        store.createIndex("Name_IX", "name", { unique: true });
+        store.createIndex("Name_IX", "name", { unique: false });
         store.createIndex("Long_and_Lat_IX", ["long", "lat"], {
           unique: false,
         }); 
@@ -81,7 +81,7 @@ $( document ).ready(function() {
                 mountain_data_upto_date_ix=false;
                 sessionStorage.setItem("mountain_data_upto_date_ix", false);
                 
-                InitMountainData();
+              //  InitMountainData();
             }
 
           //console.log('idQuery', firstItemQuery.result);
@@ -125,6 +125,11 @@ $( document ).ready(function() {
                     const tran = database.transaction("Mountains", "readwrite");
                     const mountains = tran.objectStore("Mountains");
                     var _id = 0;
+
+                    
+                    tran.addEventListener("error", (e) => {
+                        console.log(e);
+                    });
 
                     mounts.forEach(mount => {
                         console.log({ name: mount.name, long: mount.long, lat: mount.lat, alt: mount.alt, cont: mount.cont });

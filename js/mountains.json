@@ -777,44 +777,44 @@
     },
     {
         "name": "Mana Peak",
-        "long": "79.5508",
-        "lat": "30.8772",
-        "alt": "6,310",
+        "long": 79.557,
+        "lat": 30.9504,
+        "alt": 7272,
         "country": "India",
         "cont": "Asia"
-    },
-    {
+      },
+      {
         "name": "Muztagh Tower",
-        "long": "75.0985",
-        "lat": "36.3685",
-        "alt": "7,276",
+        "long": 75.094,
+        "lat": 36.8558,
+        "alt": 7273,
         "country": "Pakistan",
         "cont": "Asia"
-    },
-    {
+      },
+      {
         "name": "Diran",
-        "long": "74.6579",
-        "lat": "36.1703",
-        "alt": "7,266",
+        "long": 74.6225,
+        "lat": 36.1575,
+        "alt": 7266,
         "country": "Pakistan",
         "cont": "Asia"
-    },
-    {
+      },
+      {
         "name": "Apsarasas Kangri",
-        "long": "76.6416",
-        "lat": "35.5242",
-        "alt": "7,245",
+        "long": 77.4904,
+        "lat": 35.8812,
+        "alt": 7245,
         "country": "China",
         "cont": "Asia"
-    },
-    {
+      },
+      {
         "name": "Langtang Lirung",
-        "long": "85.5806",
-        "lat": "28.2669",
-        "alt": "7,227",
+        "long": 85.5411,
+        "lat": 28.2762,
+        "alt": 7234,
         "country": "Nepal",
         "cont": "Asia"
-    },
+      },
     {
         "name": "Karjiang",
         "long": 90.5333,
@@ -1529,44 +1529,44 @@
     },
     {
         "name": "Gul Lasht Zom",
-        "long": "71.454722",
-        "lat": "36.315556",
-        "alt": "6600",
+        "long": 71.862,
+        "lat": 36.301,
+        "alt": 6606,
         "country": "Pakistan",
         "cont": "Asia"
-      },
-      {
+    },
+    {
         "name": "Huascarán Norte",
-        "long": "-77.600556",
-        "lat": "-9.140278",
-        "alt": "6655",
+        "long": -77.605,
+        "lat": -9.127,
+        "alt": 6655,
         "country": "Peru",
         "cont": "South America"
-      },
-      {
+    },
+    {
         "name": "Khumbutse",
-        "long": "86.870556",
-        "lat": "27.8225",
-        "alt": "6636",
+        "long": 86.869,
+        "lat": 27.817,
+        "alt": 6636,
         "country": "Nepal",
         "cont": "Asia"
-      },
-      {
+    },
+    {
         "name": "Mount Kailash",
-        "long": "81.311667",
-        "lat": "31.0675",
-        "alt": "6638",
+        "long": 81.313,
+        "lat": 31.067,
+        "alt": 6638,
         "country": "China",
         "cont": "Asia"
-      },
-      {
+    },
+    {
         "name": "Yerupajá",
-        "long": "-77.654722",
-        "lat": "-9.406111",
-        "alt": "6617",
+        "long": -76.974,
+        "lat": -10.225,
+        "alt": 6617,
         "country": "Peru",
         "cont": "South America"
-      },
+    },
     {
         "name": "Nevado Tres Cruces Central",
         "long": -69.7939,
@@ -2128,7 +2128,7 @@
         "cont": "Asia"
     },
     {
-        "name": "Uludag",
+        "name": "Uludağ",
         "long": 29.1617,
         "lat": 40.0878,
         "alt": 2543,
@@ -2144,7 +2144,7 @@
         "cont": "Asia"
     },
     {
-        "name": "Suphan",
+        "name": "Süphan",
         "long": 42.0179,
         "lat": 38.5677,
         "alt": 4058,
@@ -2152,7 +2152,7 @@
         "cont": "Asia"
     },
     {
-        "name": "Kackar",
+        "name": "Kaçkar",
         "long": 41.1158,
         "lat": 40.9549,
         "alt": 3937,
@@ -2160,7 +2160,7 @@
         "cont": "Asia"
     },
     {
-        "name": "DemirKazik",
+        "name": "DemirKazık",
         "long": 36.3328,
         "lat": 36.8922,
         "alt": 3756,
@@ -2168,7 +2168,7 @@
         "cont": "Asia"
     },
     {
-        "name": "Tendurek",
+        "name": "Tendürek",
         "long": 43.5939,
         "lat": 39.3978,
         "alt": 3533,
@@ -2184,7 +2184,7 @@
         "cont": "Asia"
     },
     {
-        "name": "Kizlar Sivrisi",
+        "name": "Kızlar Sivrisi",
         "long": 33.9689,
         "lat": 36.0575,
         "alt": 3725,
@@ -2192,7 +2192,7 @@
         "cont": "Asia"
     },
     {
-        "name": "Hasan Dagi",
+        "name": "Hasan Dağı",
         "long": 34.1575,
         "lat": 38.1394,
         "alt": 3253,
