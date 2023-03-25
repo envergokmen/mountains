@@ -16,7 +16,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  
+    
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
 </head>
 
 <body>
@@ -46,7 +48,7 @@
             </div>
 
             <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-                <h1 class="display-4 fw-normal">Find Mountains</h1>
+                <h1 class="display-4 fw-normal main-header">Find Mountains</h1>
                 <p class="fs-5 text-body-secondary">
                     You can browse and filter mountains by their altitudes and locations. This tool is developed to
                     overview all mountains around the world.
@@ -56,6 +58,41 @@
         </header>
 
         <main>
+
+             
+<div>
+    <!-- <label for="altitude-input">Selected Altitude:</label> -->
+    <input type="text" value="6000" id="altitude-input" readonly style="border:0; color:#f6931f; font-weight:bold;">
+  </div>
+
+  <div id="slider"></div>
+ 
+ 
+  
+            <div class="table-responsive">
+                <table class="table text-center" id="MountList">
+                  <thead>
+                    <tr>
+                      <th style="width: 34%;"></th>
+                      <th style="width: 22%;">Altitude</th>
+                      <th style="width: 22%;">Coords</th>
+                      <th style="width: 22%;">Continent</th>
+                    </tr>
+                  </thead>
+
+                  <tbody class="mount-item-template">
+                    <tr>
+                      <th scope="row" class="text-start name">Mount Everest</th>
+                      <td class="altitude">8884</td>
+                      <td class="coords">27.9881,86.9253</td>
+                      <td class="countinent">Asia</td>
+                    </tr>
+                  </tbody>
+          
+                </table>
+              </div>
+              
+
             <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
                 <div class="col">
                     <div class="card mb-4 rounded-3 shadow-sm">
@@ -109,6 +146,8 @@
                     </div>
                 </div>
              
+
+                
                
             </div>
 
@@ -167,8 +206,14 @@
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
         crossorigin="anonymous"></script>
 
+ 
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
         <script src="/js/mountain.js"></script>
+
+
 
 
 
