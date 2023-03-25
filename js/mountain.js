@@ -137,6 +137,10 @@ $( document ).ready(function() {
                     database.close();
                 };
 
+                
+                dbOpenRequest.onerror = function (e) {
+                    console.error(e);
+                };
                 sessionStorage.setItem("mountain_data_upto_date_ix", true);
             }
         });
@@ -212,8 +216,12 @@ $( document ).ready(function() {
 
                             $tempItem.find(".name").text(data.name);
                             $tempItem.find(".altitude").text(data.alt);
-                            $tempItem.find(".coords").text(data.lat+"-"+data.long);
-                            $tempItem.find(".countinent").text(data.cont);
+                            $tempItem.find(".coords").text( data.lat +"-"+ data.long);
+
+                            $tempItem.find(".coords").attr("data-lat", data.lat);
+                            $tempItem.find(".coords").attr("data-long", data.long);
+
+                            $tempItem.find(".countinent").html(data.cont +" / <i class='gray'>"+data.country+"</i>");
                             
                             if((continent==null || continent==undefined) ||  data.cont == continent)
                             {
@@ -231,5 +239,22 @@ $( document ).ready(function() {
 
       }}
     
+
+      $( "#MountList" ).on( "click",".coords", function( e ) {
+
+         ///alert($(this).text());
+        var long=$(this).attr("data-long");
+        var lat=$(this).attr("data-lat");
+  
+
+        //var urlTemplate= `https://www.openstreetmap.org/export/embed.html?bbox=${long}%2C${lat}&amp;layer=cyclosm&amp;marker=${Number(lat)-0.50}%2C${Number(long)+0.50}`;
+var urlTemplate=`https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d56409.40343241166!2d${long}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDU5JzE3LjIiTiA4NsKwNTUnMzEuMSJF!5e0!3m2!1str!2str!4v1679769627977!5m2!1str!2str`
+        console.log( $("#current-map").attr("src"));
+        console.log( urlTemplate);
+
+       $("#current-map").attr("src", urlTemplate);
+       
+
+      });
 
 });
