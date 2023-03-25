@@ -1179,7 +1179,7 @@
         "name": "Laila Peak (Haramosh Valley)",
         "long": 75.1167,
         "lat": 35.6833,
-        "alt": 6096,
+        "alt": 6985,
         "country": "Pakistan",
         "cont": "Asia"
     },
@@ -1806,14 +1806,6 @@
         "alt": 6349,
         "country": "India",
         "cont": "AS"
-    },
-    {
-        "name": "Kinnaur Kailash",
-        "long": 78.3904,
-        "lat": 31.5983,
-        "alt": 6050,
-        "country": "India",
-        "cont": "Asia"
     },
     {
         "name": "Parinaquta",

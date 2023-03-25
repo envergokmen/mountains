@@ -46,9 +46,10 @@ $( document ).ready(function() {
         store.createIndex("Alt_IX", "alt", { unique: false });
         store.createIndex("Cont_IX", "cont", { unique: false });
         store.createIndex("Name_IX", "name", { unique: false });
-        store.createIndex("Long_and_Lat_IX", ["long", "lat"], {
-          unique: false,
-        }); 
+
+        // store.createIndex("Long_and_Lat_IX", ["long", "lat"], {
+        //   unique: false,
+        // }); 
 
     };
 
@@ -78,8 +79,8 @@ $( document ).ready(function() {
 
             if(!(firstItemQuery.result))
             {
-                mountain_data_upto_date_ix=false;
-                sessionStorage.setItem("mountain_data_upto_date_ix", false);
+                // mountain_data_upto_date_ix=false;
+                // sessionStorage.setItem("mountain_data_upto_date_ix", false);
                 
               //  InitMountainData();
             }
@@ -132,8 +133,8 @@ $( document ).ready(function() {
                     });
 
                     mounts.forEach(mount => {
-                        console.log({ name: mount.name, long: mount.long, lat: mount.lat, alt: mount.alt, cont: mount.cont });
-                        mountains.put({ name: mount.name, long: mount.long, lat: mount.lat, alt: mount.alt, cont: mount.cont });
+                         console.log({ name: mount.name, long: mount.long, lat: mount.lat, alt: mount.alt, cont: mount.cont });
+                        mountains.put({ name: mount.name, long: mount.long, lat: mount.lat, alt: mount.alt, cont: mount.cont, country:mount.country });
                         _id++;
                     });
                 };
@@ -143,9 +144,10 @@ $( document ).ready(function() {
                 };
 
                 
-                dbOpenRequest.onerror = function (e) {
-                    console.error(e);
-                };
+                // dbOpenRequest.onerror = function (e) {
+                //     console.error(e);
+                // };
+
                 sessionStorage.setItem("mountain_data_upto_date_ix", true);
             }
         });
@@ -158,7 +160,7 @@ $( document ).ready(function() {
         min: 500,
         max: 9000,
         step: 100,
-        values: [ 8000, 8890 ],
+        values: [ 600, 8890 ],
         slide: function( event, ui ) {
             $("#altitude-input").val( ui.values[0] + " - " + ui.values[1] +" Meters" );
         }
@@ -253,7 +255,9 @@ $( document ).ready(function() {
   
 
         //var urlTemplate= `https://www.openstreetmap.org/export/embed.html?bbox=${long}%2C${lat}&amp;layer=cyclosm&amp;marker=${Number(lat)-0.50}%2C${Number(long)+0.50}`;
-var urlTemplate=`https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d56409.40343241166!2d${long}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDU5JzE3LjIiTiA4NsKwNTUnMzEuMSJF!5e0!3m2!1str!2str!4v1679769627977!5m2!1str!2str`
+//var urlTemplate=`https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d56409.40343241166!2d${long}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDU5JzE3LjIiTiA4NsKwNTUnMzEuMSJF!5e0!3m2!1str!2str!4v1679769627977!5m2!1str!2str`
+
+var urlTemplate=`https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d35515.148816007204!2d${long}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDU5JzE3LjIiTiA4NsKwNTUnMzEuMSJF!5e0!3m2!1str!2str!4v1679773167948!5m2!1str!2str`
         console.log( $("#current-map").attr("src"));
         console.log( urlTemplate);
 
