@@ -1,0 +1,88 @@
+{
+    "name": "Mount Ararat",
+    "long": 44.281389,
+    "lat": 39.702778,
+    "alt": 5137,
+    "country": "Turkey",
+    "cont": "Asia"
+},
+{
+    "name": "Mount Erciyes",
+    "long": 35.4091,
+    "lat": 38.5212,
+    "alt": 3916,
+    "country": "Turkey",
+    "cont": "Asia"
+},
+{
+    "name": "Uludağ",
+    "long": 29.1617,
+    "lat": 40.0878,
+    "alt": 2543,
+    "country": "Turkey",
+    "cont": "Asia"
+},
+{
+    "name": "Emler",
+    "long": 37.9292,
+    "lat": 38.7113,
+    "alt": 3723,
+    "country": "Turkey",
+    "cont": "Asia"
+},
+{
+    "name": "Süphan",
+    "long": 42.0179,
+    "lat": 38.5677,
+    "alt": 4058,
+    "country": "Turkey",
+    "cont": "Asia"
+},
+{
+    "name": "Kaçkar",
+    "long": 41.1158,
+    "lat": 40.9549,
+    "alt": 3937,
+    "country": "Turkey",
+    "cont": "Asia"
+},
+{
+    "name": "DemirKazık",
+    "long": 36.3328,
+    "lat": 36.8922,
+    "alt": 3756,
+    "country": "Turkey",
+    "cont": "Asia"
+},
+{
+    "name": "Tendürek",
+    "long": 43.5939,
+    "lat": 39.3978,
+    "alt": 3533,
+    "country": "Turkey",
+    "cont": "Asia"
+},
+{
+    "name": "Sematepe",
+    "long": 38.1066,
+    "lat": 36.2822,
+    "alt": 3628,
+    "country": "Turkey",
+    "cont": "Asia"
+},
+{
+    "name": "Kızlar Sivrisi",
+    "long": 33.9689,
+    "lat": 36.0575,
+    "alt": 3725,
+    "country": "Turkey",
+    "cont": "Asia"
+},
+{
+    "name": "Hasan Dağı",
+    "long": 34.1575,
+    "lat": 38.1394,
+    "alt": 3253,
+    "country": "Turkey",
+    "cont": "Asia"
+}

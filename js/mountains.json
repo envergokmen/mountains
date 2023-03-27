@@ -2097,98 +2097,610 @@
     },
     {
         "name": "Mitre Peak",
-        "long": 167.93,
-        "lat": -44.668,
-        "alt": 1692,
-        "country": "New Zealand",
-        "cont": "Oceania"
-    },
-    {
-        "name": "Mount Ararat",
-        "long": 44.281389,
-        "lat": 39.702778,
-        "alt": 5137,
-        "country": "Turkey",
+        "long": 76.5031,
+        "lat": 35.7224,
+        "alt": 6010,
+        "country": "Pakistan",
         "cont": "Asia"
     },
     {
-        "name": "Mount Erciyes",
-        "long": 35.4091,
-        "lat": 38.5212,
-        "alt": 3916,
-        "country": "Turkey",
+        "name": "Laila Peak",
+        "long": 74.575,
+        "lat": 35.837,
+        "alt": 6096,
+        "country": "Pakistan",
+        "cont": "Asia"
+      },
+      {
+        "name": "Mount Logan",
+        "long": -140.397,
+        "lat": 60.567,
+        "alt": 5959,
+        "country": "Canada",
+        "cont": "North America"
+      },
+      {
+        "name": "Alpamayo",
+        "long": -77.533,
+        "lat": -8.923,
+        "alt": 5947,
+        "country": "Peru",
+        "cont": "South America"
+      },
+      {
+        "name": "Cerro Lípez",
+        "long": -67.834,
+        "lat": -22.838,
+        "alt": 5916,
+        "country": "Bolivia",
+        "cont": "South America"
+      },
+      {
+        "name": "Licancabur",
+        "long": -67.893,
+        "lat": -22.83,
+        "alt": 5916,
+        "country": "Chile",
+        "cont": "South America"
+      },
+      {
+        "name": "Falak Sar",
+        "long": 72.5778,
+        "lat": 34.8109,
+        "alt": 5918,
+        "country": "Pakistan",
+        "cont": "Asia"
+      },
+      {
+        "name": "Cotopaxi",
+        "long": -78.4361,
+        "lat": -0.6836,
+        "alt": 5897,
+        "country": "Ecuador",
+        "cont": "South America"
+      },
+      {
+        "name": "Mount Kilimanjaro",
+        "long": 37.3455,
+        "lat": -3.0758,
+        "alt": 5895,
+        "country": "Tanzania",
+        "cont": "Africa"
+      },
+      {
+        "name": "Hkakabo Razi",
+        "long": 97.3622,
+        "lat": 28.3353,
+        "alt": 5881,
+        "country": "Myanmar",
+        "cont": "Asia"
+      },
+      {
+        "name": "San José",
+        "long": -70.0767,
+        "lat": -33.1406,
+        "alt": 5856,
+        "country": "Argentina",
+        "cont": "South America"
+      },
+      {
+        "name": "Nevado Mariposa",
+        "long": -69.8472,
+        "lat": -18.0322,
+        "alt": 5426,
+        "country": "Chile",
+        "cont": "South America"
+      },
+      {
+        "name": "El Misti",
+        "long": -71.4075,
+        "lat": -16.2925,
+        "alt": 5822,
+        "country": "Peru",
+        "cont": "South America"
+      },
+      {
+        "name": "Altun Shan",
+        "long": 89.1667,
+        "lat": 39.1667,
+        "alt": 6118,
+        "country": "China",
+        "cont": "Asia"
+      },
+      {
+        "name": "Cayambe",
+        "long": -78.1667,
+        "lat": 0.0297,
+        "alt": 5790,
+        "country": "Ecuador",
+        "cont": "South America"
+      },
+      {
+        "name": "Antisana",
+        "long": -78.1412,
+        "lat": -0.4807,
+        "alt": 5758,
+        "country": "Ecuador",
+        "cont": "South America"
+      },
+      {
+        "name": "Nevado Pisco",
+        "long": -77.6331,
+        "lat": -9.0178,
+        "alt": 5752,
+        "country": "Peru",
+        "cont": "South America"
+      },
+      {
+        "name": "Nevado Anallajsi",
+        "long": -68.1789,
+        "lat": -16.5001,
+        "alt": 5675,
+        "country": "Bolivia",
+        "cont": "South America"
+      },
+      {
+        "name": "Pokalde",
+        "long": 86.8203,
+        "lat": 27.9157,
+        "alt": 5806,
+        "country": "Nepal",
+        "cont": "Asia"
+      },
+      {
+        "name": "Ubinas",
+        "long": -70.9034,
+        "lat": -16.3556,
+        "alt": 5672,
+        "country": "Peru",
+        "cont": "South America"
+      },
+      {
+        "name": "Pichu Pichu",
+        "long": -71.8386,
+        "lat": -16.1925,
+        "alt": 5664,
+        "country": "Peru",
+        "cont": "South America"
+      },
+      {
+        "name": "Mount Elbrus",
+        "long": 42.4483,
+        "lat": 43.3539,
+        "alt": 5642,
+        "country": "Russia",
+        "cont": "Europe"
+      },
+      {
+        "name": "Mehrbani Peak",
+        "long": 74.5517,
+        "lat": 36.5208,
+        "alt": 6069,
+        "country": "Pakistan",
+        "cont": "Asia"
+      },
+      {
+        "name": "Pico de Orizaba",
+        "long": -97.2664,
+        "lat": 19.029,
+        "alt": 5636,
+        "country": "Mexico",
+        "cont": "North America"
+      },
+      {
+        "name": "Mount Damavand",
+        "long": 52.1089,
+        "lat": 35.9511,
+        "alt": 5610,
+        "country": "Iran",
+        "cont": "Asia"
+      },
+      {
+        "name": "Nevado Mismi",
+        "long": -71.925,
+        "lat": -15.6442,
+        "alt": 5597,
+        "country": "Peru",
+        "cont": "South America"
+      },
+      {
+        "name": "Jade Dragon Snow Mountain",
+        "long": 100.1381,
+        "lat": 27.0189,
+        "alt": 5596,
+        "country": "China",
+        "cont": "Asia"
+      },
+      {
+        "name": "Lascar Volcano",
+        "long": -67.7292,
+        "lat": -23.3736,
+        "alt": 5592,
+        "country": "Chile",
+        "cont": "South America"
+      },
+      {
+        "name": "Mount Xuebaoding",
+        "long": 102.999,
+        "lat": 30.998,
+        "alt": 5588,
+        "country": "China",
+        "cont": "Asia"
+      },
+      {
+        "name": "Kala Patthar",
+        "long": 86.8333,
+        "lat": 27.9889,
+        "alt": 5545,
+        "country": "Nepal",
+        "cont": "Asia"
+      },
+      {
+        "name": "Mount Saint Elias",
+        "long": -140.91666666666666,
+        "lat": 60.29277777777778,
+        "alt": 5489,
+        "country": "Canada/United States",
+        "cont": "North America"
+      },
+      {
+        "name": "Concord Peak",
+        "long": -70.03333333333333,
+        "lat": -50.983333333333334,
+        "alt": 4130,
+        "country": "Chile",
+        "cont": "South America"
+      },
+      {
+        "name": "Dindaw Razi",
+        "long": 97.33805555555556,
+        "lat": 28.36388888888889,
+        "alt": 4322,
+        "country": "Myanmar",
+        "cont": "Asia"
+      },
+      {
+        "name": "Machoi Peak",
+        "long": 76.84166666666667,
+        "lat": 33.46666666666667,
+        "alt": 6000,
+        "country": "India",
+        "cont": "Asia"
+      },
+      {
+        "name": "El Plomo",
+        "long": -70.24638888888888,
+        "lat": -33.03361111111111,
+        "alt": 5424,
+        "country": "Chile",
+        "cont": "South America"
+      },
+      {
+        "name": "Bogda Feng",
+        "long": 87.06888888888889,
+        "lat": 43.01611111111111,
+        "alt": 5445,
+        "country": "China",
+        "cont": "Asia"
+      },
+      {
+        "name": "Mount Little Xuebaoding",
+        "long": 101.70638888888889,
+        "lat": 30.97222222222222,
+        "alt": 5588,
+        "country": "China",
+        "cont": "Asia"
+      },
+      {
+        "name": "Cerro El Plomo",
+        "long": -70.24277777777778,
+        "lat": -33.04472222222222,
+        "alt": 5430,
+        "country": "Chile",
+        "cont": "South America"
+      },
+      {
+        "name": "Popocatépetl",
+        "long": -98.6213888888889,
+        "lat": 19.023055555555554,
+        "alt": 5426,
+        "country": "Mexico",
+        "cont": "North America"
+      },
+      {
+        "name": "Kolahoi Peak",
+        "long": 74.65361111111111,
+        "lat": 34.282222222222224,
+        "alt": 5425,
+        "country": "India",
+        "cont": "Asia"
+      },
+      {
+        "name": "Kolahoi Peak",
+        "long": 75.283333,
+        "lat": 34.166667,
+        "alt": 5425,
+        "country": "India",
+        "cont": "Asia"
+      },
+      {
+        "name": "Chacaltaya",
+        "long": -68.131944,
+        "lat": -16.290278,
+        "alt": 5421,
+        "country": "Bolivia",
+        "cont": "South America"
+      },
+      {
+        "name": "Mount Pomiu",
+        "long": 141.068333,
+        "lat": -4.145833,
+        "alt": 5290,
+        "country": "Indonesia",
+        "cont": "Asia"
+      },
+      {
+        "name": "Ritacuba Blanco",
+        "long": -72.298611,
+        "lat": 6.483333,
+        "alt": 5410,
+        "country": "Colombia",
+        "cont": "South America"
+      },
+      {
+        "name": "Haba Xueshan",
+        "long": 100.045833,
+        "lat": 27.256944,
+        "alt": 5396,
+        "country": "China",
+        "cont": "Asia"
+      },
+      {
+        "name": "Nevado del Ruiz",
+        "long": -75.3225,
+        "lat": 4.8925,
+        "alt": 5321,
+        "country": "Colombia",
+        "cont": "South America"
+      },
+      {
+        "name": "Nevado del Huila",
+        "long": -76.033333,
+        "lat": 2.93,
+        "alt": 5364,
+        "country": "Colombia",
+        "cont": "South America"
+      },
+      {
+        "name": "El Altar",
+        "long": -78.55,
+        "lat": -1.666667,
+        "alt": 5319,
+        "country": "Ecuador",
+        "cont": "South America"
+      },
+      {
+        "name": "Mount Foraker",
+        "long": -151.405556,
+        "lat": 62.960278,
+        "alt": 5304,
+        "country": "United States",
+        "cont": "North America"
+      },
+      {
+        "name": "Mount Haramukh",
+        "long": 74.565,
+        "lat": 34.308333,
+        "alt": 5142,
+        "country": "India",
+        "cont": "Asia"
+      },
+      {
+        "name": "Maipo",
+        "long": -70.0855,
+        "lat": -33.7897,
+        "alt": 5264,
+        "country": "Chile",
+        "cont": "South America"
+    },
+    {
+        "name": "Illiniza",
+        "long": -78.6667,
+        "lat": -0.6583,
+        "alt": 5248,
+        "country": "Ecuador",
+        "cont": "South America"
+    },
+    {
+        "name": "Point 5240",
+        "long": 77.39,
+        "lat": 34.1467,
+        "alt": 5240,
+        "country": "India",
         "cont": "Asia"
     },
     {
-        "name": "Uludağ",
-        "long": 29.1617,
-        "lat": 40.0878,
-        "alt": 2543,
-        "country": "Turkey",
+        "name": "Sirbal Peak",
+        "long": 75.1931,
+        "lat": 34.3325,
+        "alt": 5242,
+        "country": "India",
         "cont": "Asia"
     },
     {
-        "name": "Emler",
-        "long": 37.9292,
-        "lat": 38.7113,
-        "alt": 3723,
-        "country": "Turkey",
+        "name": "Sangay",
+        "long": -78.3403,
+        "lat": -2.0022,
+        "alt": 5230,
+        "country": "Ecuador",
+        "cont": "South America"
+    },
+    {
+        "name": "Iztaccíhuatl",
+        "long": -98.635,
+        "lat": 19.1797,
+        "alt": 5220,
+        "country": "Mexico",
+        "cont": "North America"
+    },
+    {
+        "name": "Mount Lucania",
+        "long": -140.4542,
+        "lat": 61.0392,
+        "alt": 5260,
+        "country": "Canada",
+        "cont": "North America"
+    },
+    {
+        "name": "Karakol Peak",
+        "long": 78.4378,
+        "lat": 42.5217,
+        "alt": 5216,
+        "country": "Kyrgyzstan",
         "cont": "Asia"
     },
     {
-        "name": "Süphan",
-        "long": 42.0179,
-        "lat": 38.5677,
-        "alt": 4058,
-        "country": "Turkey",
+        "name": "Dykh-Tau",
+        "long": 43.0789,
+        "lat": 43.0744,
+        "alt": 5205,
+        "country": "Russia",
+        "cont": "Europe"
+    },
+    {
+        "name": "Shkhara",
+        "long": 43.0167,
+        "lat": 43.0278,
+        "alt": 5193,
+        "country": "Georgia",
         "cont": "Asia"
     },
     {
-        "name": "Kaçkar",
-        "long": 41.1158,
-        "lat": 40.9549,
-        "alt": 3937,
+        "name": "Mount Kenya",
+        "long": 37.296,
+        "lat": 0.151,
+        "alt": 5199,
+        "country": "Kenya",
+        "cont": "Africa"
+      },
+      {
+        "name": "Malika Parbat",
+        "long": 73.534,
+        "lat": 35.134,
+        "alt": 5290,
+        "country": "Pakistan",
+        "cont": "Asia"
+      },
+      {
+        "name": "Amarnath Peak",
+        "long": 76.823,
+        "lat": 34.15,
+        "alt": 5185,
+        "country": "India",
+        "cont": "Asia"
+      },
+      {
+        "name": "Laram Q'awa (Charaña)",
+        "long": -68.748,
+        "lat": -18.15,
+        "alt": 5592,
+        "country": "Bolivia",
+        "cont": "South America"
+      },
+      {
+        "name": "King Peak",
+        "long": -132.499,
+        "lat": 60.058,
+        "alt": 5184,
+        "country": "Canada",
+        "cont": "North America"
+      },
+      {
+        "name": "Boris Yeltsin Peak",
+        "long": 77.366,
+        "lat": 43.53,
+        "alt": 5140,
+        "country": "Kyrgyzstan",
+        "cont": "Asia"
+      },
+      {
+        "name": "Koshtan-Tau",
+        "long": 43.263,
+        "lat": 43.204,
+        "alt": 5151,
+        "country": "Russia",
+        "cont": "Europe"
+      },
+      {
+        "name": "Mount Agri",
+        "long": 43.375,
+        "lat": 39.721,
+        "alt": 5165,
         "country": "Turkey",
         "cont": "Asia"
-    },
-    {
-        "name": "DemirKazık",
-        "long": 36.3328,
-        "lat": 36.8922,
-        "alt": 3756,
-        "country": "Turkey",
+      },
+      {
+        "name": "Mount Stanley",
+        "long": 29.5072,
+        "lat": 0.4058,
+        "alt": 5109,
+        "country": "Congo and Uganda",
+        "cont": "Africa"
+      },
+      {
+        "name": "Tami Razi",
+        "long": 45.961,
+        "lat": 36.231,
+        "alt": 4695,
+        "country": "Iran and Iraq",
         "cont": "Asia"
-    },
-    {
-        "name": "Tendürek",
-        "long": 43.5939,
-        "lat": 39.3978,
-        "alt": 3533,
-        "country": "Turkey",
+      },
+      {
+        "name": "Mount Steele",
+        "long": -140.8986,
+        "lat": 61.0964,
+        "alt": 5073,
+        "country": "Canada",
+        "cont": "North America"
+      },
+      {
+        "name": "Janga",
+        "long": 72.5735,
+        "lat": 36.1285,
+        "alt": 6425,
+        "country": "Pakistan",
         "cont": "Asia"
-    },
-    {
-        "name": "Sematepe",
-        "long": 38.1066,
-        "lat": 36.2822,
-        "alt": 3628,
-        "country": "Turkey",
-        "cont": "Asia"
-    },
-    {
-        "name": "Kızlar Sivrisi",
-        "long": 33.9689,
-        "lat": 36.0575,
-        "alt": 3725,
-        "country": "Turkey",
-        "cont": "Asia"
-    },
-    {
-        "name": "Hasan Dağı",
-        "long": 34.1575,
-        "lat": 38.1394,
-        "alt": 3253,
-        "country": "Turkey",
-        "cont": "Asia"
-    }
+      },
+      {
+        "name": "Mount Kazbek",
+        "long": 42.698,
+        "lat": 42.7035,
+        "alt": 5047,
+        "country": "Russia and Georgia",
+        "cont": "Europe"
+      },
+      {
+        "name": "Tungurahua",
+        "long": -78.436,
+        "lat": -1.467,
+        "alt": 5023,
+        "country": "Ecuador",
+        "cont": "South America"
+      },
+      {
+        "name": "Carihuairazo",
+        "long": -78.202,
+        "lat": -1.517,
+        "alt": 5018,
+        "country": "Ecuador",
+        "cont": "South America"
+      },
+      {
+        "name": "Mount Bona",
+        "long": -141.7508,
+        "lat": 61.3854,
+        "alt": 5005,
+        "country": "United States",
+        "cont": "North America"
+      }
 ]
