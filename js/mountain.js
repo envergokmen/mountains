@@ -286,12 +286,12 @@ $( document ).ready(function() {
                             else if(data.alt>2500) { icon=greenIcon;}
 
 
-                           var newMarker= L.marker([data.lat, data.long], {icon: icon}).addTo(map).bindPopup(data.name);
+                           var newMarker= L.marker([data.lat, data.long], {icon: icon}).addTo(map).bindPopup(data.name +" "+ data.alt +" meters");
                             markers.push(newMarker);
 
                             $tempItem = $mountItemTemplate.clone();
 
-                            $tempItem.find(".name").text(data.name +" "+data.alt+" meters" );
+                            $tempItem.find(".name").text(data.name );
                             $tempItem.find(".altitude").text(data.alt);
                             $tempItem.find(".coords").text( data.lat +"-"+ data.long);
 
