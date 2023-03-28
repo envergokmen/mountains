@@ -9,3 +9,12 @@ body{
        cursor: pointer; 
        font-size: 0.8em;
 }
+
+#map { height: 400px; width: 100%; }
+
+.leaflet-container {
+       height: 400px;
+       width: 100%;
+       max-width: 100%;
+       max-height: 100%;
+}
