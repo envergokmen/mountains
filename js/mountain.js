@@ -16,7 +16,44 @@ $( document ).ready(function() {
         console.log("IndexedDB could not be found in this browser.");
     }
 
-     
+    var greenIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+
+      
+      var redIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+
+      
+      var blueIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+      
+      var yellowIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-yellow.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+      
     var markers = new Array();
     const map = L.map('map').setView([28.0123,86.7790], 5);
 
@@ -243,8 +280,13 @@ $( document ).ready(function() {
                             
                             var data = cursor.value;
 
-                            
-                           var newMarker= L.marker([data.lat, data.long]).addTo(map).bindPopup(data.name);
+                            var icon= yellowIcon;
+                            if(data.alt>6000) {icon=redIcon; } 
+                            else if(data.alt>4000) {icon=blueIcon ;} 
+                            else if(data.alt>2500) { icon=greenIcon;}
+
+
+                           var newMarker= L.marker([data.lat, data.long], {icon: icon}).addTo(map).bindPopup(data.name);
                             markers.push(newMarker);
 
                             $tempItem = $mountItemTemplate.clone();
