@@ -16,7 +16,15 @@ $( document ).ready(function() {
         console.log("IndexedDB could not be found in this browser.");
     }
 
-    
+     
+    var markers = new Array();
+    const map = L.map('map').setView([28.0123,86.7790], 5);
+
+    const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
     var mountain_data_upto_date_ix = sessionStorage.getItem("mountain_data_upto_date_ix");
 
     console.log({mountain_data_upto_date_ix});
@@ -113,28 +121,40 @@ $( document ).ready(function() {
     function InitMountainData() {
         $.ajax({
             type: "GET",
-            url: '/js/mountains.json',
+            url: '/js/_index.geojson',
             dataType: "json",
             jsonp: true,
-            success: function (mounts) {
+            success: function (data) {
+                
+               mounts = data.features;
+                //console.log(mounts);
 
                 const dbOpenRequest = indexedDB.open("MOUNTAINS_DB", 1);
                 dbOpenRequest.onsuccess = function () {
 
                     var database = dbOpenRequest.result;
-
                     const tran = database.transaction("Mountains", "readwrite");
                     const mountains = tran.objectStore("Mountains");
                     var _id = 0;
-
-                    
+ 
                     tran.addEventListener("error", (e) => {
                         console.log(e);
                     });
 
                     mounts.forEach(mount => {
-                         console.log({ name: mount.name, long: mount.long, lat: mount.lat, alt: mount.alt, cont: mount.cont });
-                        mountains.put({ name: mount.name, long: mount.long, lat: mount.lat, alt: mount.alt, cont: mount.cont, country:mount.country });
+                        var currentMount = mount.properties;
+                        //  console.log(currentMount);
+                        // console.log({ name: mount.name, long: mount.long, lat: mount.lat, alt: mount.alt, cont: mount.cont });
+                        mountains.put({ name: currentMount.name, 
+                            long: currentMount.longitude,
+                             lat: currentMount.latitude, 
+                            alt: currentMount.meters, 
+                            cont: currentMount.continent, 
+                            country: currentMount.countries!=null && currentMount.countries.length>0? currentMount.countries[0]:"Unknown" });
+
+
+                      //  mountains.put({ name: mount.name, long: mount.long, lat: mount.lat, alt: mount.alt, cont: mount.cont, country:mount.country });
+
                         _id++;
                     });
                 };
@@ -195,7 +215,7 @@ $( document ).ready(function() {
 
         function LoadMountainData(altitudeStarts, altitudeEnds, continent) {
 
-                console.log("loading mountain data for : ", {altitudeStarts}, {altitudeEnds}, {continent});
+                //console.log("loading mountain data for : ", {altitudeStarts}, {altitudeEnds}, {continent});
 
                 const dbOpenRequest = indexedDB.open("MOUNTAINS_DB", 1);
                 dbOpenRequest.onsuccess = function () {
@@ -209,6 +229,10 @@ $( document ).ready(function() {
                 
                     $("#MountList tbody").remove();
 
+                    for(i=0;i<markers.length;i++) {
+                        map.removeLayer(markers[i]);
+                    }
+                    
                 // Iterate over the results and log them to the console
                 query.onsuccess = (event) => {
                     const cursor = event.target.result;
@@ -218,6 +242,10 @@ $( document ).ready(function() {
                     if (cursor) {
                             
                             var data = cursor.value;
+
+                            
+                           var newMarker= L.marker([data.lat, data.long]).addTo(map).bindPopup(data.name);
+                            markers.push(newMarker);
 
                             $tempItem = $mountItemTemplate.clone();
 
@@ -265,5 +293,8 @@ var urlTemplate=`https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d35515.148
        
 
       });
+
+
+    
 
 });
