@@ -13,7 +13,7 @@ $( document ).ready(function() {
     window.shimIndexedDB;
     var searchKeyWord=null;
 
-    var allMounts=[];
+ 
 
     if (!indexedDB) {
         console.log("IndexedDB could not be found in this browser.");
@@ -57,13 +57,20 @@ $( document ).ready(function() {
         shadowSize: [41, 41]
       });
       
+      
+
     var markers = new Array();
     const map = L.map('map').setView([28.0123,86.7790], 5);
+ 
+    
+    //L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
     const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
+        maxZoom: 16,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
+
+    var markersCluster = L.markerClusterGroup();
 
     var mountain_data_upto_date_ix = sessionStorage.getItem("mountain_data_upto_date_ix");
 
@@ -269,11 +276,11 @@ $( document ).ready(function() {
                     const query = mountains.index('Alt_IX').openCursor(range, 'prev');
                     
                     $("#MountList tbody").remove();
-                        allMounts=[];
+                    map.removeLayer(markersCluster);
+                   
                     for(i=0;i<markers.length;i++) {
                         map.removeLayer(markers[i]);
                     }
-                    
                     console.log(searchKeyWord);
 
                 // Iterate over the results and log them to the console
@@ -301,9 +308,13 @@ $( document ).ready(function() {
                                     else if(data.alt>2500) { icon=greenIcon;}
         
         
-                                   var newMarker= L.marker([data.lat, data.long], {icon: icon}).addTo(map).bindPopup(data.name +" "+ data.alt +" meters");
-                                    markers.push(newMarker);
-        
+                                   //var newMarker= L.marker([data.lat, data.long], {icon: icon}).addTo(map).bindPopup(data.name +" "+ data.alt +" meters");
+
+                                   var newMarker= L.marker([data.lat, data.long], {icon: icon}).bindPopup(data.name +" "+ data.alt +" meters");
+
+                                    //markers.push(newMarker);
+                                    markersCluster.addLayer(newMarker);
+
                                     $tempItem = $mountItemTemplate.clone();
         
                                     $tempItem.find(".name").text(data.name );
@@ -335,6 +346,8 @@ $( document ).ready(function() {
     
                             cursor.continue();
                    }
+
+                   map.addLayer(markersCluster);
             }
 
             dbOpenRequest.oncomplete = function () {
@@ -351,7 +364,7 @@ $( document ).ready(function() {
         var long=$(this).attr("data-long");
         var lat=$(this).attr("data-lat");
   
-        map.flyTo([Number(lat),Number(long)], 9);
+        map.flyTo([Number(lat),Number(long)], 16);
         //var urlTemplate= `https://www.openstreetmap.org/export/embed.html?bbox=${long}%2C${lat}&amp;layer=cyclosm&amp;marker=${Number(lat)-0.50}%2C${Number(long)+0.50}`;
 //var urlTemplate=`https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d56409.40343241166!2d${long}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDU5JzE3LjIiTiA4NsKwNTUnMzEuMSJF!5e0!3m2!1str!2str!4v1679769627977!5m2!1str!2str`
 
