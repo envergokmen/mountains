@@ -11,6 +11,9 @@ $( document ).ready(function() {
     window.webkitIndexedDB ||
     window.msIndexedDB ||
     window.shimIndexedDB;
+    var searchKeyWord=null;
+
+    var allMounts=[];
 
     if (!indexedDB) {
         console.log("IndexedDB could not be found in this browser.");
@@ -249,10 +252,11 @@ $( document ).ready(function() {
 
       });
 
+      
 
-        function LoadMountainData(altitudeStarts, altitudeEnds, continent) {
+        function LoadMountainData(altitudeStarts, altitudeEnds, continent, searchKeyWord) {
 
-                //console.log("loading mountain data for : ", {altitudeStarts}, {altitudeEnds}, {continent});
+               console.log("loading mountain data for : ", {altitudeStarts}, {altitudeEnds}, {continent});
 
                 const dbOpenRequest = indexedDB.open("MOUNTAINS_DB", 1);
                 dbOpenRequest.onsuccess = function () {
@@ -263,13 +267,15 @@ $( document ).ready(function() {
                     const mountains = tran.objectStore("Mountains"); 
                     const range = IDBKeyRange.bound(altitudeStarts, altitudeEnds);
                     const query = mountains.index('Alt_IX').openCursor(range, 'prev');
-                
+                    
                     $("#MountList tbody").remove();
-
+                        allMounts=[];
                     for(i=0;i<markers.length;i++) {
                         map.removeLayer(markers[i]);
                     }
                     
+                    console.log(searchKeyWord);
+
                 // Iterate over the results and log them to the console
                 query.onsuccess = (event) => {
                     const cursor = event.target.result;
@@ -278,33 +284,55 @@ $( document ).ready(function() {
                         
                     if (cursor) {
                             
-                            var data = cursor.value;
+                          var data = cursor.value;
 
-                            var icon= yellowIcon;
-                            if(data.alt>6000) {icon=redIcon; } 
-                            else if(data.alt>4000) {icon=blueIcon ;} 
-                            else if(data.alt>2500) { icon=greenIcon;}
-
-
-                           var newMarker= L.marker([data.lat, data.long], {icon: icon}).addTo(map).bindPopup(data.name +" "+ data.alt +" meters");
-                            markers.push(newMarker);
-
-                            $tempItem = $mountItemTemplate.clone();
-
-                            $tempItem.find(".name").text(data.name );
-                            $tempItem.find(".altitude").text(data.alt);
-                            $tempItem.find(".coords").text( data.lat +"-"+ data.long);
-
-                            $tempItem.find(".coords").attr("data-lat", data.lat);
-                            $tempItem.find(".coords").attr("data-long", data.long);
-
-                            $tempItem.find(".countinent").html(data.cont +" / <i class='gray'>"+data.country+"</i>");
+                          //console.log( data.name.toLowerCase().includes(searchKeyWord));
                             
-                            if((continent==null || continent==undefined) ||  data.cont == continent)
-                            {
-                                $("#MountList").append($tempItem);
-                            }
+                            
+                                // if(searchKeyWord)
+                                // console.log(data.name.toString().toLowerCase(),"includes", searchKeyWord.toLowerCase());
 
+                                // if((continent==null || continent==undefined) ||  data.cont == continent)
+                                // {
+
+                                    var icon= yellowIcon;
+                                    if(data.alt>6000) {icon=redIcon; } 
+                                    else if(data.alt>4000) {icon=blueIcon ;} 
+                                    else if(data.alt>2500) { icon=greenIcon;}
+        
+        
+                                   var newMarker= L.marker([data.lat, data.long], {icon: icon}).addTo(map).bindPopup(data.name +" "+ data.alt +" meters");
+                                    markers.push(newMarker);
+        
+                                    $tempItem = $mountItemTemplate.clone();
+        
+                                    $tempItem.find(".name").text(data.name );
+                                    $tempItem.find(".name").attr("data-name", data.name );
+
+                                    $tempItem.find(".altitude").text(data.alt);
+                                    $tempItem.find(".coords").text( data.lat +"-"+ data.long);
+        
+                                    $tempItem.find(".coords").attr("data-lat", data.lat);
+                                    $tempItem.find(".coords").attr("data-long", data.long);
+        
+                                    $tempItem.find(".countinent").html(data.cont +" / <i class='gray'>"+data.country+"</i>");
+ 
+                                    $("#MountList").append($tempItem);
+
+                                    
+                                    // if(searchKeyWord==null || searchKeyWord==undefined || $tempItem.text().toLowerCase().indexOf(searchKeyWord.toLowerCase())>-1)
+                                    // {
+                                    //     $("#MountList").append($tempItem);
+                                    //     if(searchKeyWord)
+                                    //     console.log("matched", $tempItem, searchKeyWord);
+
+                                    // }else{
+                                    //     $("#MountList").remove($tempItem);
+                                    // }
+                                    
+
+                                // }
+    
                             cursor.continue();
                    }
             }
@@ -336,7 +364,32 @@ $( document ).ready(function() {
 
       });
 
+    //   $( "body" ).on( "keyup","input#mountain-filter", function( e ) {
+ 
+    //     var dInput = this.value;
+    //      $("#MountList").find("tr").hide().filter(":contains('" +dInput + "')").show();
 
-    
+    //  });
+
+    $( "body" ).on( "keypress","input#mountain-filter", function( e ) {
+          searchKeyWord = this.value;
+
+        //  $('#MountList tr').hide().filter(filter).show();
+        //   var dInput = this.value;
+        // $(".mount-item-template th").hide();
+       // var relatedItems =  $("#MountList").find("tr:contains('" +searchKeyWord + "')").clone();
+
+         //$("#MountList").find("tr").hide().filter("tr:contains('" +searchKeyWord + "')").show();
+
+         $("#MountList").find("tr").hide().filter(function() {
+            var reg = new RegExp(searchKeyWord, "i");
+            return reg.test($(this).text());
+        }).show();
+
+        //   $("#MountList tbody").remove();
+        //LoadMountainData(0,9000, null,searchKeyWord );
+
+    });
+
 
 });
