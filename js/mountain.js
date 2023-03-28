@@ -121,7 +121,7 @@ $( document ).ready(function() {
     function InitMountainData() {
         $.ajax({
             type: "GET",
-            url: '/js/_index.geojson',
+            url: 'js/_index.geojson',
             dataType: "json",
             jsonp: true,
             success: function (data) {
