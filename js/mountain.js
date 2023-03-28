@@ -291,7 +291,7 @@ $( document ).ready(function() {
 
                             $tempItem = $mountItemTemplate.clone();
 
-                            $tempItem.find(".name").text(data.name);
+                            $tempItem.find(".name").text(data.name +" "+data.alt+" meters" );
                             $tempItem.find(".altitude").text(data.alt);
                             $tempItem.find(".coords").text( data.lat +"-"+ data.long);
 
