@@ -113,10 +113,14 @@ $( document ).ready(function() {
     function InitMountainData() {
         $.ajax({
             type: "GET",
-            url: '/js/mountains.json',
+            url: '/js/_index.geojson',
             dataType: "json",
             jsonp: true,
-            success: function (mounts) {
+            success: function (data) {
+                
+                mounts = data.features;
+
+                //console.log(mounts);
 
                 const dbOpenRequest = indexedDB.open("MOUNTAINS_DB", 1);
                 dbOpenRequest.onsuccess = function () {
@@ -133,8 +137,15 @@ $( document ).ready(function() {
                     });
 
                     mounts.forEach(mount => {
-                         console.log({ name: mount.name, long: mount.long, lat: mount.lat, alt: mount.alt, cont: mount.cont });
-                        mountains.put({ name: mount.name, long: mount.long, lat: mount.lat, alt: mount.alt, cont: mount.cont, country:mount.country });
+                        var currentMount = mount.properties;
+                          console.log(currentMount);
+                        // console.log({ name: mount.name, long: mount.long, lat: mount.lat, alt: mount.alt, cont: mount.cont });
+                        mountains.put({ name: currentMount.name, 
+                            long: currentMount.longitude,
+                             lat: currentMount.latitude, 
+                            alt: currentMount.meters, 
+                            cont: currentMount.continent, 
+                            country: currentMount.countries!=null && currentMount.countries.length>0? currentMount.countries[0]:"Unknown" });
                         _id++;
                     });
                 };
