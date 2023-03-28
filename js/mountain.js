@@ -323,7 +323,7 @@ $( document ).ready(function() {
         var long=$(this).attr("data-long");
         var lat=$(this).attr("data-lat");
   
-        map.flyTo([Number(lat),Number(long)], 13);
+        map.flyTo([Number(lat),Number(long)], 9);
         //var urlTemplate= `https://www.openstreetmap.org/export/embed.html?bbox=${long}%2C${lat}&amp;layer=cyclosm&amp;marker=${Number(lat)-0.50}%2C${Number(long)+0.50}`;
 //var urlTemplate=`https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d56409.40343241166!2d${long}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDU5JzE3LjIiTiA4NsKwNTUnMzEuMSJF!5e0!3m2!1str!2str!4v1679769627977!5m2!1str!2str`
 
